@@ -11,7 +11,9 @@ const Header = () => {
           <NavLink to="/">about us</NavLink>
         </nav>
         <div className="logo">
-          <img src={logo} alt="" />
+          <NavLink to="/">
+            <img src={logo} alt="" />
+          </NavLink>
         </div>
       </header>
     </>

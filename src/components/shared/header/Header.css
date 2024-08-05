@@ -19,6 +19,23 @@ header nav a
     color: var(--dark-brown-clr);
     font-size: var(--font-size-24);
     text-transform: uppercase;
+    padding: 5px 10px 5px 0;
+    position: relative;
+}
+header nav a::after
+{
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: var(--dark-brown-clr);
+    transition: width .2s;
+}
+header nav a:hover::after
+{
+    width: 100%;
 }
 header .logo
 {
