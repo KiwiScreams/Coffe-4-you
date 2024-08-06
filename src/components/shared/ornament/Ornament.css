@@ -1,0 +1,10 @@
+.ornament
+{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-color: var(--beige-clr);
+}

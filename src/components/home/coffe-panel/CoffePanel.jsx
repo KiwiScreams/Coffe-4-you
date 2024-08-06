@@ -1,4 +1,5 @@
 import "./CoffePanel.css";
+import ornament from "../../../assets/images/ornament.svg"
 const CoffePanel = () => {
   return (
     <>
