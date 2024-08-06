@@ -1,0 +1,20 @@
+.filter-container
+{
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    gap: 80px;
+    background-color: var(--beige-clr);
+    text-align: center;
+}
+.filter-container a
+{
+    font-size: 22px;
+    color: var(--black-clr);
+}
+.text-container.animate
+{
+    opacity: 1;
+    transform: translateY(0);
+}
