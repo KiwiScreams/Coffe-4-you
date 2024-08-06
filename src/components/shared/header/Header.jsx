@@ -23,8 +23,8 @@ const Header = () => {
       <header className={color ? "header header-scroll" : "header"}>
         <nav>
           <NavLink to="/">home</NavLink>
-          <NavLink to="/">coffe menu</NavLink>
-          <NavLink to="/">about us</NavLink>
+          <NavLink to="/menu">coffe menu</NavLink>
+          <NavLink to="/about-us">about us</NavLink>
         </nav>
         <div className="logo">
           <NavLink to="/">
