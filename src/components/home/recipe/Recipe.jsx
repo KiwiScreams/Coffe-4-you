@@ -11,6 +11,8 @@ const Recipe = () => {
       (entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
+        } else {
+          setIsVisible(false);
         }
       },
       {
