@@ -19,6 +19,7 @@
 {
     background-image: url(../../../assets/images/coffe-panel.png);
     background-size: 100%;
+    animation: 1s linear coffePanelAnim;
 }
 .coffe-panel h4
 {
@@ -48,4 +49,15 @@
 .coffe-panel:hover h4.hover
 {
     opacity: 1;
+}
+@keyframes coffePanelAnim
+{
+    0%
+    {
+        opacity: 0;
+    }   
+    100%
+    {
+        opacity: 1;
+    }
 }
