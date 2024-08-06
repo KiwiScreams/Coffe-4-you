@@ -5,12 +5,15 @@ import React from "react";
 const Recipe = () => {
   const [isVisible, setIsVisible] = React.useState(false);
   const textContainerRef = React.createRef();
+  const imageRef = React.createRef();
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
+        } else {
+          setIsVisible(false);
         }
       },
       {
@@ -25,11 +28,19 @@ const Recipe = () => {
     };
   }, []);
 
+  React.useEffect(() => {
+    if (isVisible) {
+      imageRef.current.classList.add("animate-image");
+    } else {
+      imageRef.current.classList.remove("animate-image");
+    }
+  }, [isVisible]);
+
   return (
     <>
       <section className="recipe-container">
         <div className="image-container">
-          <img src={image} alt="" />
+          <img ref={imageRef} src={image} alt="" className="image" />
         </div>
         <div
           ref={textContainerRef}
