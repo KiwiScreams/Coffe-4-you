@@ -6,6 +6,7 @@ header
     right: 0;
     left: 0;
     padding: 32px 250px 32px 0;
+    z-index: 100;
 }
 header nav
 {
@@ -47,6 +48,11 @@ header .logo
     left: 150px;
     top: 0;
 }
+header .logo img
+{
+    width: 100%;
+    height: 100%;
+}
 header .logo::before
 {
     content: "";
@@ -62,4 +68,18 @@ header .logo::before
 header .logo:hover::before
 {
     left: 250px;
+}
+.header-scroll
+{
+    padding: 16px 250px;
+}
+.header-scroll .logo
+{
+    width: 150px;
+    height: 150px;
+}
+.header-scroll .logo img
+{
+    width: 100%;
+    height: 100%;
 }
