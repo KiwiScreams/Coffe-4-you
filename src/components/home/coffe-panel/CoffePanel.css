@@ -20,16 +20,19 @@
     background-image: url(../../../assets/images/coffe-panel.png);
     background-size: 100%;
 }
-.coffe-panel h4.text
+.coffe-panel h4
 {
     font-size: 50px;
     font-weight: 300;
-    color: transparent;
     position: absolute;
+}
+.coffe-panel h4.text
+{
+    color: transparent;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: 5px 5px 0px rgba(0,0,0,0.41);
+    text-shadow: 5px 5px 0px #00000069;
 }
 .coffe-panel:hover h4.text
 {
@@ -37,9 +40,6 @@
 }
 .coffe-panel h4.hover
 {
-    font-size: 50px;
-    font-weight: 300;
-    position: absolute;
     top: 14px;
     left: 14px;
     opacity: 0;
