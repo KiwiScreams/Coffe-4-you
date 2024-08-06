@@ -24,10 +24,18 @@
 .main-container .text-container p
 {
   color: var(--white-clr);
+  font-size: 24px;
+  text-align: center;
+  animation: fadeIn 2.5s ease-in-out;
+  margin-bottom: 30px;
+}
+.main-container .text-container cite
+{
+  color: var(--white-clr);
   font-size: 22px;
   text-align: center;
   animation: fadeIn 2.5s ease-in-out;
-  margin-bottom: 80px;
+  float: right;
 }
 .main-container .text-container
 {
@@ -45,10 +53,18 @@
     outline: none;
     color: var(--white-clr);
     animation: buttonAnim 2.8s ease-in-out;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+.main-container .text-container button:hover
+{
+    letter-spacing: 0.2px;
+    transition: 0.3s;
 }
 .main-container .text-container .button-container
 {
     width: 100%;
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
