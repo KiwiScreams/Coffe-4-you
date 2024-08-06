@@ -1,0 +1,62 @@
+.main-container
+{
+  width: 80%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(../../assets/images/main-coffe.png);
+  background-size: cover;
+  background-position: center;
+}
+.main-container h1
+{
+  font-size: 80px;
+  color: var(--white-clr);
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+  text-align: center;
+}
+.main-container .text-container p
+{
+  color: var(--white-clr);
+  font-size: 22px;
+  text-align: center;
+  animation: fadeIn 2.5s ease-in-out;
+  margin-bottom: 80px;
+}
+.main-container .text-container
+{
+  width: 70%;
+  margin: auto;
+}
+.main-container .text-container button
+{
+    background-color: transparent;
+    margin: auto;
+    display: block;
+    width: 200px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    color: var(--white-clr);
+    animation: buttonAnim 2.8s ease-in-out;
+}
+.main-container .text-container .button-container
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-container .text-container .button-container .line
+{
+    width: 400px;
+    height: 1px;
+    animation: animateLine 2s linear;
+    background-color: var(--white-clr);
+}
