@@ -1,0 +1,7 @@
+footer
+{
+    width: 100%;
+    background-color: var(--dark-brown-clr);
+    height: 500px;
+    margin-top: 80px;
+}
