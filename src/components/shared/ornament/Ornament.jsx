@@ -1,9 +1,10 @@
 import "./Ornament.css";
+import React from "react";
 import ornament from "../../../assets/images/ornament.svg";
-const Ornament = () => {
+const Ornament = (props) => {
     return ( 
         <>
-        <section className="ornament">
+        <section className="ornament" style={props.style}>
             <img src={ornament} alt="" />
         </section>
         </>

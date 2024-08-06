@@ -1,0 +1,33 @@
+.about-content-section
+{
+    width: 80%;
+    margin: auto;
+    background-color: var(--beige-clr);
+    padding: 40px;
+    padding-top: 80px;
+}
+.about-content-section .center-content
+{
+    display: flex;
+    gap: 200px;
+    justify-content: space-between;
+}
+.about-content-section .center-content .text
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--dark-brown-clr);
+    font-size: var(--font-size-22);
+}
+.about-content-section .bottom-content
+{
+    margin: 100px 0;
+}
+.about-content-section .bottom-content p
+{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: var(--font-size-22);
+}
