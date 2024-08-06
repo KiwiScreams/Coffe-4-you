@@ -13,8 +13,11 @@
     font-size: 22px;
     color: var(--black-clr);
 }
-.text-container.animate
+.filter-container .image
 {
-    opacity: 1;
-    transform: translateY(0);
+    overflow: hidden;
+}
+.filter-container .image:hover img
+{
+    transform: scale(1.2);
 }
