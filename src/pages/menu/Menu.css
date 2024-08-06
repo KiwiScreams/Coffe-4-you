@@ -1,0 +1,14 @@
+.menu-section
+{
+    background-color: var(--beige-clr);
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    padding-top: 120px;
+}
+.menu-section .menu-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
