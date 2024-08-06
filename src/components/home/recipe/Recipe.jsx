@@ -1,13 +1,13 @@
 import "./Recipe.css";
 import image from "../../../assets/images/recipe1.png";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import React from "react";
 const Recipe = () => {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const textContainerRef = React.createRef();
-  const imageRef = React.createRef();
+  const [isVisible, setIsVisible] = useState(false);
+  const textContainerRef = useRef(null);
+  const imageRef = useRef(null);
 
-  React.useEffect(() => {
+  useLayoutEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -21,14 +21,18 @@ const Recipe = () => {
       }
     );
 
-    observer.observe(textContainerRef.current);
+    if (textContainerRef.current) {
+      observer.observe(textContainerRef.current);
+    }
 
     return () => {
-      observer.unobserve(textContainerRef.current);
+      if (textContainerRef.current) {
+        observer.unobserve(textContainerRef.current);
+      }
     };
   }, []);
 
-  React.useEffect(() => {
+  useLayoutEffect(() => {
     if (isVisible) {
       imageRef.current.classList.add("animate-image");
     } else {

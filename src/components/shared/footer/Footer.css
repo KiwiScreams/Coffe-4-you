@@ -54,3 +54,7 @@ footer .footer-bottom ul
     display: flex;
     gap: 20px;
 }
+footer li
+{
+    cursor: pointer;
+}
