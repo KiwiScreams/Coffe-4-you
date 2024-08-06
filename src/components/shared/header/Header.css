@@ -64,3 +64,16 @@ header .logo:hover::before
 {
     left: 250px;
 }
+.header-scroll
+{
+    padding: 16px 250px;
+}
+.header-scroll .logo
+{
+    width: 150px;
+    height: 150px;
+}
+.header-scroll .logo img
+{
+    width: 100%;
+}
