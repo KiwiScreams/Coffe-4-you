@@ -9,24 +9,24 @@ const Filter = () => {
   return (
     <>
       <section className="filter-container">
-        <NavLink>
+        <button>
           <div className="image">
             <img src={coffee} />
           </div>
           Coffee
-        </NavLink>
-        <NavLink>
+        </button>
+        <button>
           <div className="image">
             <img src={cake} />
           </div>
           Deserts
-        </NavLink>
-        <NavLink>
+        </button>
+        <button>
           <div className="image">
             <img src={masterpiece} />
           </div>
           Masterpiece
-        </NavLink>
+        </button>
       </section>
     </>
   );

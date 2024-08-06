@@ -2,20 +2,28 @@
 {
     width: 80%;
     margin: auto;
-    padding: 40px;
+    padding: 40px 40px 96px 40px;
     display: flex;
-    gap: 80px;
     background-color: var(--beige-clr);
     text-align: center;
+    justify-content: space-between;
 }
-.filter-container a
+.filter-container button
 {
     font-size: 22px;
     color: var(--black-clr);
+    background-color: transparent;
+    width: 30%;
+    text-align: center;
 }
 .filter-container .image
 {
     overflow: hidden;
+    width: 100%;
+}
+.filter-container .image img
+{
+    width: 100%;
 }
 .filter-container .image:hover img
 {
