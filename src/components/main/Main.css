@@ -60,3 +60,38 @@
     animation: animateLine 2s linear;
     background-color: var(--white-clr);
 }
+@keyframes fadeIn
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes buttonAnim
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+@keyframes animateLine
+{
+    0%
+    {
+      width: 0;
+    }
+    100%
+    {
+      width: 400px;
+    }
+}
