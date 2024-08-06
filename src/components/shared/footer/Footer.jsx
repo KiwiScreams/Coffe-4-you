@@ -59,7 +59,7 @@ const Footer = () => {
         <div
           className="footer-image"
           style={{
-            transform: `translateX(${scrollPosition * -0.18}px)`,
+            transform: `translateX(${scrollPosition * -0.4}px)`,
             transition: "transform 0.3s ease-out",
           }}
         >
