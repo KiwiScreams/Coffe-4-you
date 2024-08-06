@@ -58,3 +58,23 @@ footer li
 {
     cursor: pointer;
 }
+#SLM span:nth-child(1)
+{
+    color: red;
+}
+#SLM span:nth-child(2)
+{
+    color: green;
+}
+#SLM span:nth-child(3)
+{
+    color: blue;
+}
+#SLM:hover span
+{
+    margin-right: 10px;
+}
+#SLM
+{
+    padding: 20px 6px;
+}
