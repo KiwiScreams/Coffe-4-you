@@ -1,0 +1,20 @@
+.about-text-section
+{
+    background-color: var(--beige-clr);
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    padding-top: 216px;
+    text-align: center;
+}
+.about-text-section h3
+{
+    font-size: var(--font-size-40);
+    margin-bottom: 100px;
+}
+.about-text-section p
+{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+}
