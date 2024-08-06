@@ -11,7 +11,12 @@ const Header = () => {
       setColor(false);
     }
   };
-  window.addEventListener("scroll", changeColor);
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, [changeColor]);
 
   return (
     <>

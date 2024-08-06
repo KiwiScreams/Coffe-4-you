@@ -48,6 +48,11 @@ header .logo
     left: 150px;
     top: 0;
 }
+header .logo img
+{
+    width: 100%;
+    height: 100%;
+}
 header .logo::before
 {
     content: "";
@@ -76,4 +81,5 @@ header .logo:hover::before
 .header-scroll .logo img
 {
     width: 100%;
+    height: 100%;
 }
