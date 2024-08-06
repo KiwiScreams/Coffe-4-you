@@ -1,7 +1,11 @@
+import Main from "../../components/main/Main";
+
 const Home = () => {
-    return ( 
-        <></>
-     );
-}
- 
+  return (
+    <>
+      <Main />
+    </>
+  );
+};
+
 export default Home;
