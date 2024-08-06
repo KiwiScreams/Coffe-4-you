@@ -1,13 +1,40 @@
 import "./Recipe.css";
 import image from "../../../assets/images/recipe1.png";
+import { useEffect, useState } from "react";
+import React from "react";
 const Recipe = () => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const textContainerRef = React.createRef();
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    observer.observe(textContainerRef.current);
+
+    return () => {
+      observer.unobserve(textContainerRef.current);
+    };
+  }, []);
+
   return (
     <>
       <section className="recipe-container">
         <div className="image-container">
           <img src={image} alt="" />
         </div>
-        <div className="text-container">
+        <div
+          ref={textContainerRef}
+          className={`text-container ${isVisible ? "animate" : ""}`}
+        >
           <h3>Chocolate cake</h3>
           <div className="text">
             <p>
