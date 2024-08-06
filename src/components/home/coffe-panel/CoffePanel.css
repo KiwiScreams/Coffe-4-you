@@ -19,7 +19,7 @@
 {
     background-image: url(../../../assets/images/coffe-panel.png);
     background-size: 100%;
-    animation: 1s linear coffePanelAnim;
+    animation: 1s linear coffePanelAnim ;
 }
 .coffe-panel h4
 {

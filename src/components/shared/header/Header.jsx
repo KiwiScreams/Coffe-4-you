@@ -22,9 +22,24 @@ const Header = () => {
     <>
       <header className={color ? "header header-scroll" : "header"}>
         <nav>
-          <NavLink to="/">home</NavLink>
-          <NavLink to="/menu">coffe menu</NavLink>
-          <NavLink to="/about-us">about us</NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            home
+          </NavLink>
+          <NavLink
+            to="/menu"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            coffe menu
+          </NavLink>
+          <NavLink
+            to="/about-us"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            about us
+          </NavLink>
         </nav>
         <div className="logo">
           <NavLink to="/">

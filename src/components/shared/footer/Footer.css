@@ -28,11 +28,12 @@ footer .footer-main ul h3
 {
     font-size: var(--font-size-24);
     font-weight: 300;
+    margin-bottom: 20px;
 }
 footer img
 {
     position: absolute;
-    right: -300px;
+    right: -800px;
     bottom: 0px;
     z-index: 2;
 }
