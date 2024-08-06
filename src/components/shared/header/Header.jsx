@@ -32,7 +32,7 @@ const Header = () => {
             to="/menu"
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
-            coffe menu
+            menu
           </NavLink>
           <NavLink
             to="/about-us"
