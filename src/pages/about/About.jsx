@@ -1,9 +1,13 @@
+import AboutText from "../../components/about/abouttext/AboutText";
+import Ornament from "../../components/shared/ornament/Ornament";
+
 const AboutUs = () => {
-    return ( 
-        <>
-        <h1>Hello About Us</h1>
-        </>
-     );
-}
- 
+  return (
+    <>
+      <AboutText />
+      <Ornament />
+    </>
+  );
+};
+
 export default AboutUs;
