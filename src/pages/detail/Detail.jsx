@@ -1,6 +1,7 @@
 import { useState, useEffect, useDispatch } from "react";
 import { deserts } from "../../assets/data/data";
 import { useParams } from "react-router-dom";
+import "./Detail.css";
 const Detail = () => {
   const { name } = useParams();
   console.log(name);
@@ -15,18 +16,24 @@ const Detail = () => {
   }, [name]);
   return (
     <>
-      <div className="car-detail-container">
-        <div className="car-detail-left">
-          <div className="car-detail-image">
-            {/* <img src={detail.image} alt="" /> */}
+      <section className="detail-container">
+        <div
+          className="image-container"
+          style={{
+            backgroundImage: `url(${detail.image})`
+          }}
+        >
+          <div className="image-content">
+            <img src={detail.image} alt="" />
           </div>
         </div>
-        <div className="car-detail-info">
-          <h1>{detail.name}</h1>
-          {/* <p>starting price {detail.price} $</p> */}
+        <div className="text-container">
+          <h3>{detail.name}</h3>
+          <p>history{detail.history}</p>
           <p>{detail.description}</p>
+          <p>{detail.price}</p>
         </div>
-      </div>
+      </section>
     </>
   );
 };
