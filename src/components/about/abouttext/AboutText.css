@@ -10,7 +10,8 @@
 .about-text-section h3
 {
     font-size: var(--font-size-40);
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+    color: var(--dark-brown-clr);
 }
 .about-text-section p
 {

@@ -1,16 +1,20 @@
 import { useState, useEffect, useSelector, useDispatch } from "react";
-import { Link } from "react-router-dom";
-import "./MenuItem.css"
+import { Link, useNavigate } from "react-router-dom";
+import "./MenuItem.css";
 const MenuItem = (props) => {
   const { id, name, data, image } = props.data;
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate(data);
+  };
   return (
     <>
-      <div className="menu-item">
+      <div className="menu-item" onClick={handleNavigation}>
         <div className="menu-item-image">
           <img src={image} alt="" />
         </div>
         <div className="menu-item-body">
-          <Link to={data}><h2 className="name">{name}</h2></Link>
+          <h2 className="name">{name}</h2>
         </div>
         <br />
       </div>
