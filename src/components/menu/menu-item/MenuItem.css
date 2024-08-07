@@ -1,7 +1,6 @@
 .menu-item
 {
-    width: 30%;
-    aspect-ratio: 1;
+    width: fit-content;
 }
 .menu-item .menu-item-image
 {
@@ -15,4 +14,8 @@
 {
     color: var(--dark-brown-clr);
     font-size: var(--font-size-22);
+}
+.menu-item .menu-item-image
+{
+    margin: auto;
 }
