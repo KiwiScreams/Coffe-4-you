@@ -17,22 +17,17 @@ const Detail = () => {
   }, [name]);
   const handleImageClick = () => {
     setIsEnlarged(true);
+    document.body.classList.add("no-scroll");
   };
 
   const handleCloseClick = () => {
     setIsEnlarged(false);
+    document.body.classList.remove("no-scroll");
   };
   return (
     <>
       <section className="detail-container">
-        <div
-          className="image-container"
-          style={
-            {
-              // backgroundImage: `url(${detail.image})`
-            }
-          }
-        >
+        <div className="image-container">
           <div className="image-content">
             <img
               src={detail.image}
@@ -45,7 +40,6 @@ const Detail = () => {
                 <img src={detail.image} alt="" />
                 <button className="close-button" onClick={handleCloseClick}>
                   <i className="fas fa-times"></i>
-                  lol
                 </button>
               </div>
             )}
