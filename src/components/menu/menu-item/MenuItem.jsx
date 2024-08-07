@@ -14,7 +14,7 @@ const MenuItem = (props) => {
           <img src={image} alt="" />
         </div>
         <div className="menu-item-body">
-          <h2 className="name">{name}</h2>
+          <h2 className="name animate-name">{name}</h2>
         </div>
         <br />
       </div>
