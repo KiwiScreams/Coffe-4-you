@@ -20,7 +20,7 @@ const Detail = () => {
         <div
           className="image-container"
           style={{
-            backgroundImage: `url(${detail.image})`
+            // backgroundImage: `url(${detail.image})`
           }}
         >
           <div className="image-content">
@@ -29,9 +29,13 @@ const Detail = () => {
         </div>
         <div className="text-container">
           <h3>{detail.name}</h3>
-          <p>history{detail.history}</p>
-          <p>{detail.description}</p>
-          <p>{detail.price}</p>
+          <p className="description">{detail.description}</p>
+          <p><span>Ingridients:</span><br/>{detail.ingridients}</p>
+          <span>Interesting:</span>
+          <br/>
+          <i className="history">"{detail.history}"</i>
+          <br/>
+          <span>Price:</span><span className="price">{detail.price}$</span>
         </div>
       </section>
     </>
