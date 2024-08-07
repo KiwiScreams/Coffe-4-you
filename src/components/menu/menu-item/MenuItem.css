@@ -1,62 +1,27 @@
-.menu-item
-{
-    width: fit-content;
+.menu-item {
+  width: fit-content;
 }
-.menu-item .menu-item-image
-{
-    width: 100%;
-    overflow: hidden;
+.menu-item .menu-item-image {
+  width: 100%;
+  overflow: hidden;
 }
-.menu-item .menu-item-image img
-{
-    width: 100%;
+.menu-item .menu-item-image img {
+  width: 100%;
 }
-.menu-item .menu-item-image:hover img
-{
-    transform: scale(1.2);
+.menu-item .menu-item-body {
+  text-align: center;
 }
-.menu-item .menu-item-body
-{
-    text-align: center;
+.menu-item .menu-item-image {
+  margin: auto;
 }
-.menu-item .menu-item-body a
-{
-    color: var(--dark-brown-clr);
-    font-size: var(--font-size-22);
+.menu-item .menu-item-body .name {
+  color: var(--dark-brown-clr);
+  font-size: var(--font-size-22);
+  margin-top: 20px;
 }
-.menu-item .menu-item-image
-{
-    margin: auto;
+.menu-item:hover img {
+  transform: scale(1.2);
 }
-/* MenuItem.css */
-
-.animate-name {
-    position: relative;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 24px;
-    color: var(--dark-brown-clr);
-    padding: 0.5em;
-    border: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .animate-name::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #333;
-    transform: scale(0);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .animate-name:hover::after {
-    transform: scale(1);
-  }
-  
-  .animate-name:hover {
-    color: #fff;
-  }
+.menu-item:hover .name {
+  letter-spacing: 2px;
+}
