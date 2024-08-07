@@ -1,0 +1,29 @@
+.detail-container {
+  width: 80%;
+  margin: auto;
+  background-color: var(--beige-clr);
+  padding: 40px;
+  padding-top: 216px;
+}
+.detail-container .image-container {
+  width: 100%;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+.detail-container .image-container .image-content img {
+  width: 100%;
+  height: 100%;
+}
+.detail-container .image-container .image-content {
+  width: 30%;
+  height: 400px;
+  box-shadow: 0 0 1000px black;
+}
