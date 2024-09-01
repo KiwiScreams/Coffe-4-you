@@ -2,12 +2,14 @@ import { useState, useEffect, useDispatch } from "react";
 import { deserts } from "../../assets/data/data";
 import { useParams } from "react-router-dom";
 import "./Detail.css";
+import { Link } from "react-router-dom";
 const Detail = () => {
   const { name } = useParams();
   console.log(name);
   const [detail, setDetail] = useState({});
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [isEnlarged, setIsEnlarged] = useState(false);
+
   useEffect(() => {
     const findDetail = deserts.filter((data) => data.data === name);
     if (findDetail.length > 0) {
@@ -73,12 +75,16 @@ const Detail = () => {
         <h3>Related Products</h3>
         <div className="related-products-container">
           {relatedProducts.map((product) => (
-            <div key={product.name} className="related-product">
+            <Link
+              key={product.name}
+              to={`/${product.data}`}
+              className="related-product"
+            >
               <img src={product.image} alt="" />
               <h4>{product.name}</h4>
               <p>{product.description}</p>
               <span>Price: {product.price}$</span>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
