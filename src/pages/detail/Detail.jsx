@@ -71,23 +71,6 @@ const Detail = () => {
           <span className="price">{detail.price}$</span>
         </div>
       </section>
-      <section className="related-products">
-        <h3>Related Products</h3>
-        <div className="related-products-container">
-          {relatedProducts.map((product) => (
-            <Link
-              key={product.name}
-              to={`/${product.data}`}
-              className="related-product"
-            >
-              <img src={product.image} alt="" />
-              <h4>{product.name}</h4>
-              <p>{product.description}</p>
-              <span>Price: {product.price}$</span>
-            </Link>
-          ))}
-        </div>
-      </section>
     </>
   );
 };
