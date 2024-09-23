@@ -1,5 +1,4 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,18 +8,16 @@
   outline: none;
   transition: 0.3s;
 }
-body
-{
+body {
   background-image: url(./assets/images/coffe-background.png);
   width: 100vw;
   height: 100vh;
   background-size: 100%;
   overflow-x: hidden;
 }
-:root
-{
-  --beige-clr: #FFE4BD;
-  --dark-brown-clr: #53392C;
+:root {
+  --beige-clr: #ffe4bd;
+  --dark-brown-clr: #53392c;
   --medium-brown-clr: #54392ce6;
   --light-brown-clr: #54392b1f;
   --white-clr: #fff;
@@ -30,21 +27,18 @@ body
   --font-size-24: 24px;
   --font-size-40: 40px;
 }
-button, a
-{
+button,
+a {
   cursor: pointer;
 }
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   display: block;
   width: 10px;
 }
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background-color: var(--dark-brown-clr);
   border-radius: 20px;
 }
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
   background-color: var(--beige-clr);
 }
