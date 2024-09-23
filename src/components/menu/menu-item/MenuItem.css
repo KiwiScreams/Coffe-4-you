@@ -4,6 +4,10 @@
 .menu-item .menu-item-image {
   width: 100%;
   overflow: hidden;
+  border-radius: 0 160px 0 160px;
+  border: 10px solid var(--dark-brown-clr);
+  border-top: 1px;
+  border-bottom: 1px;
 }
 .menu-item .menu-item-image img {
   width: 100%;
@@ -20,7 +24,10 @@
   margin-top: 20px;
 }
 .menu-item:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+.menu-item:hover .menu-item-image {
+  border: transparent;
 }
 .menu-item:hover .name {
   letter-spacing: 2px;
