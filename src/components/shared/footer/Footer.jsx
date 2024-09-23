@@ -19,6 +19,10 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate("/about-us");
   };
+  const handleNavigateToMenuPage = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/menu");
+  };
   return (
     <>
       <footer>
@@ -42,7 +46,7 @@ const Footer = () => {
             <ul>
               <h3>Production</h3>
               <li>Drinks</li>
-              <li>Desserts</li>
+              <li onClick={handleNavigateToMenuPage}>Desserts</li>
               <li>Snacks</li>
             </ul>
             <ul>
