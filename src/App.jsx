@@ -5,7 +5,25 @@ import Menu from "./pages/menu/Menu";
 import AboutUs from "./pages/about/About";
 import Footer from "./components/shared/footer/Footer";
 import Detail from "./pages/detail/Detail";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 function App() {
+  const location = useLocation();
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/":
+        document.title = "Coffe 4 You | Home";
+        break;
+      case "/about-us":
+        document.title = "Coffe 4 You | About";
+        break;
+      case "/menu":
+        document.title = "Coffe 4 You | Menu";
+        break;
+      default:
+        document.title = "Coffe 4 You";
+    }
+  }, [location]);
   return (
     <>
       <Header />
