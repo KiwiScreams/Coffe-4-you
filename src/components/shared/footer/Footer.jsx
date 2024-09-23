@@ -1,6 +1,7 @@
 import "./Footer.css";
 import footerImage from "../../../assets/images/footer-coffe.png";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -13,6 +14,11 @@ const Footer = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const navigate = useNavigate();
+  const handleNavigateToAboutPage = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/about-us");
+  };
   return (
     <>
       <footer>
@@ -29,7 +35,7 @@ const Footer = () => {
             </ul>
             <ul>
               <h3>Company</h3>
-              <li>About us</li>
+              <li onClick={handleNavigateToAboutPage}>About us</li>
               <li>Vacancy</li>
               <li>Branches</li>
             </ul>
@@ -53,7 +59,14 @@ const Footer = () => {
               <li>Privacy Policy</li>
             </ul>
             <p>2024© All rights reserved</p>
-            <li>Created by <a href="https://github.com/KiwiScreams" target='_blank' id='SLM'><span>S</span><span>L</span><span>M</span></a></li>
+            <li>
+              Created by{" "}
+              <a href="https://github.com/KiwiScreams" target="_blank" id="SLM">
+                <span>S</span>
+                <span>L</span>
+                <span>M</span>
+              </a>
+            </li>
           </div>
         </div>
         <div
