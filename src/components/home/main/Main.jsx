@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "./Main.css";
 import { useState, useEffect } from "react";
 const Main = () => {
+  const navigate = useNavigate();
   const citations = [
     {
       id: 1,
@@ -70,7 +72,10 @@ const Main = () => {
     const randomIndex = Math.floor(Math.random() * citations.length);
     setRandomCitation(citations[randomIndex]);
   }, []);
-
+  const handleNavigateToMenu = () =>
+  {
+    navigate("/menu");
+  }
   return (
     <>
       <section className="main-container">
@@ -80,7 +85,7 @@ const Main = () => {
           <cite>{randomCitation.author}</cite>
           <div className="button-container">
             <div className="line"></div>
-            <button>View Our Menu</button>
+            <button onClick={handleNavigateToMenu}>View Our Menu</button>
             <div className="line"></div>
           </div>
         </div>

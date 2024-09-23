@@ -9,12 +9,12 @@
   width: 100%;
   height: 500px;
   margin: auto;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   background-position: center;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 .detail-container .image-container .image-content img {
   width: 100%;
@@ -22,7 +22,12 @@
 }
 .detail-container .image-container .image-content {
   width: 50%;
+  height: 100%;
   overflow: hidden;
+  border-radius: 0 200px 0 200px;
+  border: 10px solid var(--dark-brown-clr);
+  border-top: 1px;
+  border-bottom: 1px;
 }
 .detail-container .image-container .image-content:hover img {
   transform: scale(1.2);
