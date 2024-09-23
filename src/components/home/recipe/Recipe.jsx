@@ -1,6 +1,6 @@
 import "./Recipe.css";
 import image from "../../../assets/images/recipe1.png";
-import { useEffect, useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import React from "react";
 const Recipe = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,9 +1,7 @@
-import { NavLink } from "react-router-dom";
 import "./Filter.css";
 import coffee from "../../../assets/images/coffe-filter.png";
 import cake from "../../../assets/images/cake-filter.png";
 import React from "react";
-import { useState, useEffect, useRef } from "react";
 import masterpiece from "../../../assets/images/masterpiece-filter.png";
 const Filter = () => {
   return (
