@@ -6,7 +6,6 @@
     background-color: var(--beige-clr);
     display: flex;
     gap: 40px;
-    /* justify-content: space-between; */
 }
 .recipe-container .image-container
 {

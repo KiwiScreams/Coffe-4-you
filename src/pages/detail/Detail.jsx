@@ -1,24 +1,17 @@
-import { useState, useEffect, useDispatch } from "react";
+import { useState, useEffect } from "react";
 import { deserts } from "../../assets/data/data";
 import { useParams } from "react-router-dom";
 import "./Detail.css";
-import { Link } from "react-router-dom";
 const Detail = () => {
   const { name } = useParams();
   console.log(name);
   const [detail, setDetail] = useState({});
-  const [relatedProducts, setRelatedProducts] = useState([]);
   const [isEnlarged, setIsEnlarged] = useState(false);
 
   useEffect(() => {
     const findDetail = deserts.filter((data) => data.data === name);
     if (findDetail.length > 0) {
       setDetail(findDetail[0]);
-
-      const related = deserts.filter(
-        (data) => data.category === findDetail[0].category && data.data !== name
-      );
-      setRelatedProducts(related);
     } else {
       window.location.href = "/";
     }
