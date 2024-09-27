@@ -70,7 +70,11 @@ const Footer = () => {
               <ul key={index}>
                 <h3>{section.title}</h3>
                 {section.items.map((item, itemIndex) => (
-                  <li key={itemIndex} onClick={item.onClick}>
+                  <li
+                    key={itemIndex}
+                    onClick={item.onClick}
+                    className={item.className ? item.className : ""}
+                  >
                     {item.text}
                   </li>
                 ))}
