@@ -28,7 +28,8 @@ body {
   --font-size-40: 40px;
 }
 button,
-a {
+a,
+.pointer {
   cursor: pointer;
 }
 ::-webkit-scrollbar {

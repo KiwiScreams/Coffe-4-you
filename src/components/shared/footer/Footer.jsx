@@ -51,7 +51,7 @@ const Footer = () => {
               <li>Privacy Policy</li>
             </ul>
             <p>2024© All rights reserved</p>
-            <li>
+            <li className="pointer">
               Created by
               <a href="https://github.com/KiwiScreams" target="_blank" id="SLM">
                 <span>S</span>
