@@ -17,10 +17,25 @@ const Header = () => {
       window.removeEventListener("scroll", changeColor);
     };
   }, [changeColor]);
-
+  const navData = [
+    {
+      text: "home",
+      to: "/",
+    },
+    {
+      text: "menu",
+      to: "/menu",
+    },
+    {
+      text: "about us",
+      to: "/about-us",
+    },
+  ];
   return (
     <>
-      <header className={color ? "header header-scroll" : "header"}>
+      <header
+        className={color ? "header desktop header-scroll" : "header desktop"}
+      >
         <nav>
           <NavLink
             to="/"

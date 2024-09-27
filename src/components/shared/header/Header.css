@@ -103,7 +103,7 @@ header .logo:hover::before {
   height: 100%;
 }
 @media screen and (max-width: 1050px) {
-  header {
+  header.desktop {
     padding: 32px 32px 32px 0;
   }
   header .logo {
