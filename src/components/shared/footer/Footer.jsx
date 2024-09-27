@@ -11,21 +11,39 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate("/menu");
   };
-  const contactMap = {
-    title: "Contact",
-    addresses: [
-      {
-        location: "Tbilisi, Pekini st. No. 43",
-        phone: "+995 558 19 55",
-      },
-      {
-        location: "Tbilisi, Kostava st. No. 28",
-        phone: "+995 258 58 54",
-      },
-    ],
-    separator: "---",
-    email: "info@coffee4you.ge",
-  };
+  const footerData = [
+    {
+      title: "Contact",
+      items: [
+        "Tbilisi, Pekini st. No. 43",
+        "+995 558 19 55",
+        "Tbilisi, Kostava st. No. 28",
+        "+995 258 58 54",
+        "---",
+        "info@coffee4you.ge",
+      ],
+    },
+    {
+      title: "Company",
+      items: [
+        { text: "About us", onClick: handleNavigateToAboutPage },
+        "Vacancy",
+        "Branches",
+      ],
+    },
+    {
+      title: "Production",
+      items: [
+        "Drinks",
+        { text: "Desserts", onClick: handleNavigateToMenuPage },
+        "Snacks",
+      ],
+    },
+    {
+      title: "Help",
+      items: ["Instruction", "Help Center", "Problem with the site"],
+    },
+  ];
   return (
     <>
       <footer>
