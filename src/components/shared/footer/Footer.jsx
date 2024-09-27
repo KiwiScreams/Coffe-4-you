@@ -75,10 +75,6 @@ const Footer = () => {
         </div>
         <div
           className="footer-image"
-          style={{
-            transform: `translateX(${scrollPosition * -0.4}px)`,
-            transition: "transform 0.3s ease-out",
-          }}
         >
           <img src={footerImage} alt="Coffe 4 You" />
         </div>
