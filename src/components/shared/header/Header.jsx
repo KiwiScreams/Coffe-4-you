@@ -53,6 +53,26 @@ const Header = () => {
           </NavLink>
         </div>
       </header>
+      <header
+        className={color ? "header mobile header-scroll" : "header mobile"}
+      >
+        <nav>
+          {navData.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.to}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              {item.text}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="logo">
+          <NavLink to="/">
+            <img src={logo} alt="Coffe 4 You logo" />
+          </NavLink>
+        </div>
+      </header>
     </>
   );
 };
