@@ -44,7 +44,7 @@ const Recipe = () => {
     <>
       <section className="recipe-container">
         <div className="image-container">
-          <img ref={imageRef} src={image} alt="" className="image" />
+          <img ref={imageRef} src={image} alt="Coffe 4 You" className="image" />
         </div>
         <div
           ref={textContainerRef}

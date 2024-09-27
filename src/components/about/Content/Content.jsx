@@ -6,7 +6,7 @@ const AboutContent = () => {
       <section className="about-content-section">
         <div className="center-content">
           <div className="image-container">
-            <img src={aboutUsImage} alt="" />
+            <img src={aboutUsImage} alt="Coffe 4 You" />
           </div>
           <div className="text">
             <p>
@@ -19,7 +19,6 @@ const AboutContent = () => {
               savored.
             </p>
             <p>
-              {" "}
               With each cup meticulously brewed to perfection and each dessert
               crafted with love, we aim to delight your senses and leave you
               craving for more.
