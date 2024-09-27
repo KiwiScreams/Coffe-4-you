@@ -27,21 +27,25 @@ const Footer = () => {
       title: "Company",
       items: [
         { text: "About us", onClick: handleNavigateToAboutPage },
-        "Vacancy",
-        "Branches",
+        { text: "Vacancy" },
+        { text: "Branches" },
       ],
     },
     {
       title: "Production",
       items: [
-        "Drinks",
+        { text: "Drinks" },
         { text: "Desserts", onClick: handleNavigateToMenuPage },
-        "Snacks",
+        { text: "Snacks" },
       ],
     },
     {
       title: "Help",
-      items: ["Instruction", "Help Center", "Problem with the site"],
+      items: [
+        { text: "Instruction" },
+        { text: "Help Center" },
+        { text: "Problem with the site" },
+      ],
     },
   ];
   return (
@@ -49,33 +53,16 @@ const Footer = () => {
       <footer>
         <div className="footer">
           <div className="footer-main">
-            <ul>
-              <h3>Contact</h3>
-              <li>Tbilisi, Pekini st. No. 43</li>
-              <li>+995 558 19 55</li>
-              <li>Tbilisi, Kostava st. No. 28</li>
-              <li>+995 258 58 54</li>
-              <li>---</li>
-              <li>info@coffee4you.ge</li>
-            </ul>
-            <ul>
-              <h3>Company</h3>
-              <li onClick={handleNavigateToAboutPage}>About us</li>
-              <li>Vacancy</li>
-              <li>Branches</li>
-            </ul>
-            <ul>
-              <h3>Production</h3>
-              <li>Drinks</li>
-              <li onClick={handleNavigateToMenuPage}>Desserts</li>
-              <li>Snacks</li>
-            </ul>
-            <ul>
-              <h3>Help</h3>
-              <li>Instruction</li>
-              <li>Help Center</li>
-              <li>Problem with the site</li>
-            </ul>
+            {footerData.map((section, index) => (
+              <ul key={index}>
+                <h3>{section.title}</h3>
+                {section.items.map((item, itemIndex) => (
+                  <li key={itemIndex} onClick={item.onClick}>
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
+            ))}
           </div>
           <div className="footer-bottom">
             <ul>
