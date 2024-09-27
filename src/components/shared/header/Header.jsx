@@ -37,24 +37,15 @@ const Header = () => {
         className={color ? "header desktop header-scroll" : "header desktop"}
       >
         <nav>
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            home
-          </NavLink>
-          <NavLink
-            to="/menu"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            menu
-          </NavLink>
-          <NavLink
-            to="/about-us"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            about us
-          </NavLink>
+          {navData.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.to}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              {item.text}
+            </NavLink>
+          ))}
         </nav>
         <div className="logo">
           <NavLink to="/">
