@@ -26,7 +26,11 @@ const Footer = () => {
     {
       title: "Company",
       items: [
-        { text: "About us", onClick: handleNavigateToAboutPage },
+        {
+          text: "About us",
+          onClick: handleNavigateToAboutPage,
+          className: "pointer",
+        },
         { text: "Vacancy" },
         { text: "Branches" },
       ],
@@ -35,7 +39,11 @@ const Footer = () => {
       title: "Production",
       items: [
         { text: "Drinks" },
-        { text: "Desserts", onClick: handleNavigateToMenuPage },
+        {
+          text: "Desserts",
+          onClick: handleNavigateToMenuPage,
+          className: "pointer",
+        },
         { text: "Snacks" },
       ],
     },
@@ -72,7 +80,9 @@ const Footer = () => {
           <div className="footer-bottom">
             <ul>
               {footerBottomData[0].items.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="pointer">
+                  {item}
+                </li>
               ))}
             </ul>
             <p>2024© All rights reserved</p>
