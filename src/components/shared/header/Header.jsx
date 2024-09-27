@@ -17,29 +17,55 @@ const Header = () => {
       window.removeEventListener("scroll", changeColor);
     };
   }, [changeColor]);
-
+  const navData = [
+    {
+      text: "home",
+      to: "/",
+    },
+    {
+      text: "menu",
+      to: "/menu",
+    },
+    {
+      text: "about us",
+      to: "/about-us",
+    },
+  ];
   return (
     <>
-      <header className={color ? "header header-scroll" : "header"}>
+      <header
+        className={color ? "header desktop header-scroll" : "header desktop"}
+      >
         <nav>
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            home
+          {navData.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.to}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              {item.text}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="logo">
+          <NavLink to="/">
+            <img src={logo} alt="Coffe 4 You logo" />
           </NavLink>
-          <NavLink
-            to="/menu"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            menu
-          </NavLink>
-          <NavLink
-            to="/about-us"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            about us
-          </NavLink>
+        </div>
+      </header>
+      <header
+        className={color ? "header mobile header-scroll" : "header mobile"}
+      >
+        <nav>
+          {navData.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.to}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              {item.text}
+            </NavLink>
+          ))}
         </nav>
         <div className="logo">
           <NavLink to="/">
