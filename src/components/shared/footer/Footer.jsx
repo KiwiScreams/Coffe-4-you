@@ -1,19 +1,7 @@
 import "./Footer.css";
 import footerImage from "../../../assets/images/footer-coffe.png";
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Footer = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   const navigate = useNavigate();
   const handleNavigateToAboutPage = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -23,48 +11,87 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate("/menu");
   };
+  const footerData = [
+    {
+      title: "Contact",
+      items: [
+        { text: "Tbilisi, Pekini st. No. 43" },
+        { text: "+995 558 19 55" },
+        { text: "Tbilisi, Kostava st. No. 28" },
+        { text: "+995 258 58 54" },
+        { text: "---" },
+        { text: "info@coffee4you.ge" },
+      ],
+    },
+    {
+      title: "Company",
+      items: [
+        {
+          text: "About us",
+          onClick: handleNavigateToAboutPage,
+          className: "pointer",
+        },
+        { text: "Vacancy", className: "pointer" },
+        { text: "Branches", className: "pointer" },
+      ],
+    },
+    {
+      title: "Production",
+      items: [
+        { text: "Drinks", className: "pointer" },
+        {
+          text: "Desserts",
+          onClick: handleNavigateToMenuPage,
+          className: "pointer",
+        },
+        { text: "Snacks", className: "pointer" },
+      ],
+    },
+    {
+      title: "Help",
+      items: [
+        { text: "Instruction", className: "pointer" },
+        { text: "Help Center", className: "pointer" },
+        { text: "Problem with the site", className: "pointer" },
+      ],
+    },
+  ];
+  const footerBottomData = [
+    {
+      items: ["Terms and Conditions", "license", "Privacy Policy"],
+    },
+  ];
   return (
     <>
       <footer>
         <div className="footer">
           <div className="footer-main">
-            <ul>
-              <h3>Contact</h3>
-              <li>Tbilisi, Pekini st. No. 43</li>
-              <li>+995 558 19 55</li>
-              <li>Tbilisi, Kostava st. No. 28</li>
-              <li>+995 258 58 54</li>
-              <li>---</li>
-              <li>info@coffee4you.ge</li>
-            </ul>
-            <ul>
-              <h3>Company</h3>
-              <li onClick={handleNavigateToAboutPage}>About us</li>
-              <li>Vacancy</li>
-              <li>Branches</li>
-            </ul>
-            <ul>
-              <h3>Production</h3>
-              <li>Drinks</li>
-              <li onClick={handleNavigateToMenuPage}>Desserts</li>
-              <li>Snacks</li>
-            </ul>
-            <ul>
-              <h3>Help</h3>
-              <li>Instruction</li>
-              <li>Help Center</li>
-              <li>Problem with the site</li>
-            </ul>
+            {footerData.map((section, index) => (
+              <ul key={index}>
+                <h3>{section.title}</h3>
+                {section.items.map((item, itemIndex) => (
+                  <li
+                    key={itemIndex}
+                    onClick={item.onClick}
+                    className={item.className ? item.className : ""}
+                  >
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
+            ))}
           </div>
           <div className="footer-bottom">
             <ul>
-              <li>Terms and Conditions</li>
-              <li>license</li>
-              <li>Privacy Policy</li>
+              {footerBottomData[0].items.map((item, index) => (
+                <li key={index} className="pointer">
+                  {item}
+                </li>
+              ))}
             </ul>
             <p>2024© All rights reserved</p>
-            <li>
-              Created by{" "}
+            <li className="pointer">
+              Created by
               <a href="https://github.com/KiwiScreams" target="_blank" id="SLM">
                 <span>S</span>
                 <span>L</span>
@@ -73,13 +100,7 @@ const Footer = () => {
             </li>
           </div>
         </div>
-        <div
-          className="footer-image"
-          style={{
-            transform: `translateX(${scrollPosition * -0.4}px)`,
-            transition: "transform 0.3s ease-out",
-          }}
-        >
+        <div className="footer-image">
           <img src={footerImage} alt="Coffe 4 You" />
         </div>
       </footer>
