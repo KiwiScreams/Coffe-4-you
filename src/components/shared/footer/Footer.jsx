@@ -11,6 +11,21 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate("/menu");
   };
+  const contactMap = {
+    title: "Contact",
+    addresses: [
+      {
+        location: "Tbilisi, Pekini st. No. 43",
+        phone: "+995 558 19 55",
+      },
+      {
+        location: "Tbilisi, Kostava st. No. 28",
+        phone: "+995 258 58 54",
+      },
+    ],
+    separator: "---",
+    email: "info@coffee4you.ge",
+  };
   return (
     <>
       <footer>
