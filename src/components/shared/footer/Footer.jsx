@@ -48,6 +48,11 @@ const Footer = () => {
       ],
     },
   ];
+  const footerBottomData = [
+    {
+      items: ["Terms and Conditions", "license", "Privacy Policy"],
+    },
+  ];
   return (
     <>
       <footer>
