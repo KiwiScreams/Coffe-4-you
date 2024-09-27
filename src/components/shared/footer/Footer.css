@@ -65,29 +65,25 @@ footer .footer-bottom ul
   display: flex;
   gap: 20px;
 }
-footer li
-{
-  cursor: pointer;
-}
 #SLM span:nth-child(1)
 {
   color: red;
+  font-weight: bold;
+  margin-left: 10px;
 }
 #SLM span:nth-child(2)
 {
   color: green;
+  font-weight: bold;
 }
 #SLM span:nth-child(3)
 {
   color: blue;
+  font-weight: bold;
 }
 #SLM:hover span
 {
   margin-right: 10px;
-}
-#SLM
-{
-  padding: 20px 6px;
 }
 @media screen and (max-width: 1750px)
 {
