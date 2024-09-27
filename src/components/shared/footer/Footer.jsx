@@ -71,9 +71,9 @@ const Footer = () => {
           </div>
           <div className="footer-bottom">
             <ul>
-              <li>Terms and Conditions</li>
-              <li>license</li>
-              <li>Privacy Policy</li>
+              {footerBottomData[0].items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>2024© All rights reserved</p>
             <li className="pointer">
