@@ -67,18 +67,18 @@ footer .footer-bottom ul
 }
 #SLM span:nth-child(1)
 {
-  color: red;
+  color: var(--red-clr);
   font-weight: bold;
   margin-left: 10px;
 }
 #SLM span:nth-child(2)
 {
-  color: green;
+  color: var(--green-clr);
   font-weight: bold;
 }
 #SLM span:nth-child(3)
 {
-  color: blue;
+  color: var(--blue-clr);
   font-weight: bold;
 }
 #SLM:hover span
