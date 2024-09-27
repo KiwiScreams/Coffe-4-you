@@ -3,17 +3,6 @@ import footerImage from "../../../assets/images/footer-coffe.png";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Footer = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   const navigate = useNavigate();
   const handleNavigateToAboutPage = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
