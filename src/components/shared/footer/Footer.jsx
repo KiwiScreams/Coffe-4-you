@@ -31,28 +31,28 @@ const Footer = () => {
           onClick: handleNavigateToAboutPage,
           className: "pointer",
         },
-        { text: "Vacancy" },
-        { text: "Branches" },
+        { text: "Vacancy", className: "pointer" },
+        { text: "Branches", className: "pointer" },
       ],
     },
     {
       title: "Production",
       items: [
-        { text: "Drinks" },
+        { text: "Drinks", className: "pointer" },
         {
           text: "Desserts",
           onClick: handleNavigateToMenuPage,
           className: "pointer",
         },
-        { text: "Snacks" },
+        { text: "Snacks", className: "pointer" },
       ],
     },
     {
       title: "Help",
       items: [
-        { text: "Instruction" },
-        { text: "Help Center" },
-        { text: "Problem with the site" },
+        { text: "Instruction", className: "pointer" },
+        { text: "Help Center", className: "pointer" },
+        { text: "Problem with the site", className: "pointer" },
       ],
     },
   ];
