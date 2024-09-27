@@ -15,12 +15,12 @@ const Footer = () => {
     {
       title: "Contact",
       items: [
-        "Tbilisi, Pekini st. No. 43",
-        "+995 558 19 55",
-        "Tbilisi, Kostava st. No. 28",
-        "+995 258 58 54",
-        "---",
-        "info@coffee4you.ge",
+        { text: "Tbilisi, Pekini st. No. 43" },
+        { text: "+995 558 19 55" },
+        { text: "Tbilisi, Kostava st. No. 28" },
+        { text: "+995 258 58 54" },
+        { text: "---" },
+        { text: "info@coffee4you.ge" },
       ],
     },
     {
