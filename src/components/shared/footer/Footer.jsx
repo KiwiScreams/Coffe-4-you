@@ -52,7 +52,7 @@ const Footer = () => {
             </ul>
             <p>2024© All rights reserved</p>
             <li>
-              Created by{" "}
+              Created by
               <a href="https://github.com/KiwiScreams" target="_blank" id="SLM">
                 <span>S</span>
                 <span>L</span>
@@ -61,9 +61,7 @@ const Footer = () => {
             </li>
           </div>
         </div>
-        <div
-          className="footer-image"
-        >
+        <div className="footer-image">
           <img src={footerImage} alt="Coffe 4 You" />
         </div>
       </footer>
