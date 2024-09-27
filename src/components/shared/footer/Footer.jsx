@@ -48,26 +48,6 @@ const Footer = () => {
       ],
     },
   ];
-  const footerBottomData = [
-    {
-      title: "",
-      items: ["Terms and Conditions", "license", "Privacy Policy"],
-    },
-    {
-      copyright: "2024© All rights reserved",
-    },
-    {
-      createdBy: {
-        text: "Created by",
-        link: {
-          href: "https://github.com/KiwiScreams",
-          target: "_blank",
-          id: "SLM",
-          text: "SLM",
-        },
-      },
-    },
-  ];
   return (
     <>
       <footer>
