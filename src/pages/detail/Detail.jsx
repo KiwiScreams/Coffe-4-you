@@ -34,15 +34,15 @@ const Detail = () => {
           <div className="image-content">
             <img
               src={detail.image}
-              alt=""
+              alt="Coffe 4 You"
               onClick={handleImageClick}
               className={isEnlarged ? "enlarged" : ""}
             />
             {isEnlarged && (
               <div className="enlarged-image-container">
-                <img src={detail.image} alt="" />
+                <img src={detail.image} alt="Coffe 4 You" />
                 <button className="close-button" onClick={handleCloseClick}>
-                  <i class="fa-solid fa-xmark"></i>
+                  <i className="fa-solid fa-xmark"></i>
                 </button>
               </div>
             )}

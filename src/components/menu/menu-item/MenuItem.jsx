@@ -10,7 +10,7 @@ const MenuItem = (props) => {
     <>
       <div className="menu-item" onClick={handleNavigation}>
         <div className="menu-item-image">
-          <img src={image} alt="" />
+          <img src={image} alt="Coffe 4 You" />
         </div>
         <div className="menu-item-body">
           <h2 className="name">{name}</h2>

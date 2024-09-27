@@ -43,7 +43,7 @@ const Header = () => {
         </nav>
         <div className="logo">
           <NavLink to="/">
-            <img src={logo} alt="" />
+            <img src={logo} alt="Coffe 4 You logo" />
           </NavLink>
         </div>
       </header>

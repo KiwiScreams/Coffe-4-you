@@ -5,7 +5,7 @@ const Ornament = (props) => {
     return ( 
         <>
         <section className="ornament" style={props.style}>
-            <img src={ornament} alt="" />
+            <img src={ornament} alt="Coffe 4 You" />
         </section>
         </>
      );
